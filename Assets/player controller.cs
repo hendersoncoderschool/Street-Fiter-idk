@@ -5,10 +5,11 @@ using UnityEngine;
 public class playercontroller : MonoBehaviour
 {
     Animator animator;
-    public float moveSpeed = 8f;
+    public float moveSpeed;
     public Rigidbody2D rb;
+    public float maxSpeed = 1;
 
-    public float moveUp = 9f; 
+    public float moveUp; 
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,8 @@ public class playercontroller : MonoBehaviour
         }
         //animator.Play();
         float input = Input.GetAxis("Horizontal");
-        rb.AddForce(Vector2.right * moveSpeed * input);
+        if(rb.velocity.magnitude < maxSpeed){
+            rb.AddForce(Vector2.right * moveSpeed * input);
+        }
     }
 }
