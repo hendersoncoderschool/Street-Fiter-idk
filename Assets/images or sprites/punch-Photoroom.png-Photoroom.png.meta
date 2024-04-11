@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c301330d4a646d44985fe6d699770a3e
+guid: 5424ab94f00250d4283bfb8536ee3a71
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vega-oldstance_0
+      name: punch-Photoroom.png-Photoroom_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 76
-        height: 113
+        width: 73.333336
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96441f4b28babaf42905dfd49acca494
-      internalID: 461861388
+      spriteID: 0f4f8f8526b20e948935cc42cb3a05f1
+      internalID: 1034188470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vega-oldstance_1
+      name: punch-Photoroom.png-Photoroom_1
       rect:
         serializedVersion: 2
-        x: 76
+        x: 73
         y: 0
-        width: 76
-        height: 113
+        width: 82
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbc083958b065df4aa13344ad963ff6f
-      internalID: 497663484
+      spriteID: c3f2ea8d0a4d92242b2a8760163c36b9
+      internalID: 1343460055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: vega-oldstance_2
+      name: punch-Photoroom.png-Photoroom_2
       rect:
         serializedVersion: 2
-        x: 152
+        x: 155
         y: 0
-        width: 76
-        height: 113
+        width: 65
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,71 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91dd5beaec54c9341a312e20b3e3dcad
-      internalID: -938146835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vega-oldstance_3
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 0
-        width: 76
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad973594213b9a847a5dc8a8d0117402
-      internalID: -1438466314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vega-oldstance_4
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 0
-        width: 76
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c3aff8862cfb5a43a939536dbc86a79
-      internalID: -1831055202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: vega-oldstance_5
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 0
-        width: 76
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: feb6a9fceeb2659429d4ef7a0e708767
-      internalID: -565874977
+      spriteID: 2b35a9a63a631134f8a90d364b822e12
+      internalID: -72661146
       vertices: []
       indices: 
       edges: []
@@ -259,12 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      vega-oldstance_0: 461861388
-      vega-oldstance_1: 497663484
-      vega-oldstance_2: -938146835
-      vega-oldstance_3: -1438466314
-      vega-oldstance_4: -1831055202
-      vega-oldstance_5: -565874977
+      punch-Photoroom.png-Photoroom_0: 1034188470
+      punch-Photoroom.png-Photoroom_1: 1343460055
+      punch-Photoroom.png-Photoroom_2: -72661146
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

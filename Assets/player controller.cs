@@ -29,5 +29,19 @@ public class playercontroller : MonoBehaviour
         if(rb.velocity.magnitude < maxSpeed){
             rb.AddForce(Vector2.right * moveSpeed * input);
         }
+
+        if(Input.GetKeyDown("e")){
+            animator.SetTrigger("punch1");
+        }
     }
+
+    
+
+
+
+
+
+
+
+    
 }
