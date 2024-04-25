@@ -20,7 +20,9 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("w")){
+        if(Input.GetKeyDown("w") && isGrounded() )
+        {
+            animator.SetTrigger("Jump");
             //print("jump");
             rb.AddForce(Vector2.up * moveUp, ForceMode2D.Impulse);
         }
@@ -33,9 +35,32 @@ public class playercontroller : MonoBehaviour
         if(Input.GetKeyDown("e")){
             animator.SetTrigger("punch1");
         }
-    }
 
-    
+        if(Input.GetKeyDown("a")|| Input.GetKeyDown("d"))
+        {
+            animator.SetBool("IsWalkin", true);
+        }
+        else{animator.SetBool("IsWalkin", false);
+
+
+
+        }
+
+    }
+    private bool isGrounded()
+    {
+        Vector2 center = transform.position - transform.up * 0.5f;
+        float radius = 3f;
+
+        if(Physics2D.OverlapCircle(center, radius, 1<<6)){
+            print("isgrounded");
+        }
+        else{
+            print("not");
+        }
+
+        return Physics2D.OverlapCircle(center, radius, 1<<6);
+    }
 
 
 
