@@ -2,16 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playercontroller : MonoBehaviour
+public class EHONDA : MonoBehaviour
 {
-    Animator animator;
-    public float moveSpeed;
-    public Rigidbody2D rb;
-    public float maxSpeed = 1;
-
-    public float moveUp; 
     // Start is called before the first frame update
-    void Start()
+   void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -20,7 +14,7 @@ public class playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("w") && isGrounded() )
+        if(Input.GetKeyDown("upArrow") && isGrounded() )
         {
             animator.SetTrigger("Jump");
             //print("jump");
@@ -36,7 +30,7 @@ public class playercontroller : MonoBehaviour
             animator.SetTrigger("punch1");
         }
 
-        if(Input.GetKey("a")|| Input.GetKey("d"))
+        if(Input.GetKey("leftArrow")|| Input.GetKey("rightArrow"))
         {
             animator.SetBool("isWalkin", true);
         }
@@ -61,11 +55,4 @@ public class playercontroller : MonoBehaviour
         return Physics2D.OverlapCircle(center, radius, 1<<6);
     }
 
-
-
-
-
-
-
-    
 }
