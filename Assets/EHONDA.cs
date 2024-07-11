@@ -6,12 +6,13 @@ public class EHONDA : MonoBehaviour
 {
     Animator animator;
     public float moveSpeed;
+    public int health;
     public Rigidbody2D rb;
     public float maxSpeed = 1;
-
+    
     public float moveUp; 
     // Start is called before the first frame update
-   void Start()
+    void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -20,7 +21,7 @@ public class EHONDA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded() )
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded())
         {
             animator.SetTrigger("Jump");
             //print("jump");
@@ -28,8 +29,8 @@ public class EHONDA : MonoBehaviour
         }
         //animator.Play();
         float input = Input.GetAxis("Horizontal2");
-        print(input);
-        if(rb.velocity.magnitude < maxSpeed){
+        // print(input);
+        if (rb.velocity.magnitude < maxSpeed) {
             rb.AddForce(Vector2.right * moveSpeed * input);
         }
 
@@ -54,14 +55,70 @@ public class EHONDA : MonoBehaviour
         Vector2 center = transform.position - transform.up * 0.5f;
         float radius = 3f;
 
-        if(Physics2D.OverlapCircle(center, radius, 1<<6)){
+        if (Physics2D.OverlapCircle(center, radius, 1<<6)) {
             print("isgrounded");
-        }
-        else{
+        } else {
             print("not");
         }
 
         return Physics2D.OverlapCircle(center, radius, 1<<6);
+
     }
 
+    public void GetHit()
+    {
+        animator.SetTrigger("Hit2");
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Punchbrox"))
+        {
+            GetHit();
+        }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Entered collision with " + collision.gameObject.name);
+        if (collision.gameObject.name == "Vega")
+        {
+            Debug.Log("collision with Vega");
+        }
+        if (collision.gameObject.tag == "MyGameObjectTag")
+        {
+            Debug.Log("collision with tag Vega");
+        }
+    }
+    void OnCollisionStay(Collision collision){
+        Debug.Log("Colliding with " + collision.gameObject.name);    
+    }
+    void OnCollisionExit(Collision collision){
+        Debug.Log("Exited Collision with " + collision.gameObject.name);
+    }
 }
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
